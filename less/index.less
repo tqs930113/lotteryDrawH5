@@ -1,0 +1,212 @@
+@html-base-rem:100px;
+@gray-color:#f98b8e;
+@middle-width:70%;
+@large-width:90%;
+@default-font:16px;
+
+#color(@name){
+	&when(@name = gray){
+        color:#fe918e;
+	}
+	&when(@name = white){
+		color:#f3f3f3;
+	}
+	&when(@name = whiteless){
+		color:#e4e4e4;
+	}
+}
+#bg-color(@name){
+	&when(@name = gray){
+		background-color:#f98b8e;
+	}
+	&when(@name = black){
+		background-color:#383838;
+	}
+
+}
+#line-height(@h){
+	heght: @h;
+	line-height: @h;
+}
+#square(@size){
+	width:@size;
+	height: @size;
+}
+
+html{
+	font-size:@html-base-rem !important;
+
+}
+body{
+	font-size:@default-font;
+	  background: url(../images/banner.jpg) no-repeat  ;
+	  #bg-color(black);
+	  background-size: cover;
+
+}
+
+// header
+header{
+	width:@middle-width;
+	margin:0 auto;
+	padding-top:.3rem;
+	  .caption{
+  			display: flex;
+  			width: 100%;
+  			justify-content:space-around;
+  			margin-bottom: .2rem;
+
+  			&__word{
+  				#line-height(.36rem);
+				#square(.36rem);
+				border:1px  solid @gray-color;
+				text-align: center;
+				font: 30px "黑体";
+				#color(gray);
+  		}
+  }
+
+  		.logo{
+  			widht:100%;
+  			margin-bottom: .2rem;
+
+  			img{
+  				width:100%;
+  			}
+  		}
+}
+
+
+// banner
+.banner{
+	width:@middle-width;
+	margin:0 auto;
+	padding-bottom:.25rem;
+
+	&__logo{
+		width: 100%;
+	}
+}
+// activity
+
+// 抽奖样式
+#lottery {
+	position: relative;
+	width:@large-width;
+	// height: 510px;
+	margin: 0px auto;
+	// border: 4px solid #ba1809;
+}
+#lottery  .row{
+	display:flex;
+	justify-content:space-between;
+}
+
+#lottery .btn{
+	padding:0;
+	margin-top: -1px;
+    margin-left: -1px;
+}
+#lottery  .col {
+	position: relative;
+	width: 33%;
+	height: 33%;
+	text-align: center;
+	color: #333;
+	font-index: -999
+}
+#lottery  .col img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+#lottery  .col.active .mask {
+	display: block;
+}
+.mask {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: rgba(252, 211, 4, 0.5);
+	display: none;
+}
+// 抽奖结果遮罩层
+.layer{
+	display:none;
+	position: absolute;
+	top:0;
+	left: 0;
+	background-color:#000;
+	opacity:.3;
+	#square(100%);
+}
+.wrap{
+	display:none;
+	#color(white);
+	margin:auto;
+	position: absolute;
+	width: 50%;
+	height: 30%;
+	top:0;
+	bottom:0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,.5);
+
+	&__close{
+		cursor:pointer;
+		position: absolute;
+		top: -6px;
+  		right: -6px;
+	}
+
+	&__content{
+		position:relative;
+		top: 30%;
+		left: 10%;
+		width: 60%;
+	}
+
+}
+
+
+// footer
+footer{
+	width:@large-width;
+	margin:0 auto;	
+	#color(white);
+
+	.rule-title{
+		font-size:28px;
+		font-weight:normal;
+	}
+
+	.rule{
+		margin-left: 1em;
+		font-size:14px;
+		#color(whiteless);
+		font-family: "MicrosoftYaHei";
+	}
+}
+
+
+// 自适应样式
+@media screen and (max-width:768px) {
+	header .caption__word{
+		#square(.22rem);
+		font: 20px "黑体";
+	}
+	footer{
+		.rule-title{
+			font-size:18px;
+		}	
+		.rule{
+			font-size:12px;
+		}
+	}
+}
+
+
+

@@ -1,0 +1,147 @@
+html {
+  font-size: 100px !important;
+}
+body {
+  font-size: 16px;
+  background: url(../images/banner.jpg) no-repeat;
+  background-color: #383838;
+  background-size: cover;
+}
+header {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: .3rem;
+}
+header .caption {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: .2rem;
+}
+header .caption__word {
+  heght: 0.36rem;
+  line-height: 0.36rem;
+  width: 0.36rem;
+  height: 0.36rem;
+  border: 1px solid #f98b8e;
+  text-align: center;
+  font: 30px "黑体";
+  color: #fe918e;
+}
+header .logo {
+  widht: 100%;
+  margin-bottom: .2rem;
+}
+header .logo img {
+  width: 100%;
+}
+.banner {
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: .25rem;
+}
+.banner__logo {
+  width: 100%;
+}
+#lottery {
+  position: relative;
+  width: 90%;
+  margin: 0px auto;
+}
+#lottery .row {
+  display: flex;
+  justify-content: space-between;
+}
+#lottery .btn {
+  padding: 0;
+  margin-top: -1px;
+  margin-left: -1px;
+}
+#lottery .col {
+  position: relative;
+  width: 33%;
+  height: 33%;
+  text-align: center;
+  color: #333;
+  font-index: -999;
+}
+#lottery .col img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#lottery .col.active .mask {
+  display: block;
+}
+.mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(252, 211, 4, 0.5);
+  display: none;
+}
+.layer {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: .3;
+  width: 100%;
+  height: 100%;
+}
+.wrap {
+  display: none;
+  color: #f3f3f3;
+  margin: auto;
+  position: absolute;
+  width: 50%;
+  height: 30%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.wrap__close {
+  cursor: pointer;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+}
+.wrap__content {
+  position: relative;
+  top: 30%;
+  left: 10%;
+  width: 60%;
+}
+footer {
+  width: 90%;
+  margin: 0 auto;
+  color: #f3f3f3;
+}
+footer .rule-title {
+  font-size: 28px;
+  font-weight: normal;
+}
+footer .rule {
+  margin-left: 1em;
+  font-size: 14px;
+  color: #e4e4e4;
+  font-family: "MicrosoftYaHei";
+}
+@media screen and (max-width: 768px) {
+  header .caption__word {
+    width: 0.22rem;
+    height: 0.22rem;
+    font: 20px "黑体";
+  }
+  footer .rule-title {
+    font-size: 18px;
+  }
+  footer .rule {
+    font-size: 12px;
+  }
+}
